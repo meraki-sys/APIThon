@@ -40,7 +40,12 @@ public class OBReadTransaction {
     }
 
     public String getCreditDebitIndicator() {
-        return creditDebitIndicator;
+    	
+    	if(creditDebitIndicator.equals("Debit")) {
+    		return creditDebitIndicator;
+    	}
+    	else
+    		return ("Not a Debit");
     }
 
     public void setCreditDebitIndicator(String creditDebitIndicator) {
@@ -80,7 +85,11 @@ public class OBReadTransaction {
     }
 
     public String getTransactionInformation() {
-        return transactionInformation;
+    	if(creditDebitIndicator.equals("Debit")) {
+    		return ("Interest Deduction");
+    	}
+    	else
+    		return transactionInformation;
     }
 
     public void setTransactionInformation(String transactionInformation) {
